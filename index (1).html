@@ -1,0 +1,110 @@
+<!doctype HTML>
+
+<html> 
+<head> 
+<title> Krug</title>
+<meta charset="utf-8">
+<style> 
+#pozadina { background:#050210;
+    width:300px;
+    height:300px;
+    margin:auto;
+  padding:100px;
+align-items: center;
+}
+#krug {
+    position: relative;
+  
+    width:100px;
+    height:100px;
+    margin:50px;
+    padding:50px;
+    border-radius: 100%;
+  background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+  filter:blur(1px);
+  animation: animate 0.5s linear infinite;
+
+}
+@keyframes animate {
+    from
+{ transform:rotate(0deg)}
+
+to { transform:rotate(360deg)}
+}
+
+#krug::after{
+    position:absolute;
+    content:'';
+    background:#050210;
+    top:30px;
+    right:30px;
+    left:30px;
+    bottom:30px;
+border-radius: 100%;
+
+}
+
+#pulsiranje{
+    position: relative;
+    width: 80px;
+    height:80px;
+    margin: 50px;
+    padding:50px;
+
+    border-radius: 100%;
+background: linear-gradient(#FFFFFF, #FFFAFA, #FFFFFF);
+filter:blur(2px);
+animation: pulsate 2.5s ease-out;
+  animation-iteration-count: infinite;
+}
+#pulsiranje::after{
+    position:absolute;
+    content:'';
+    background:#050210;
+    top:30px;
+    right:30px;
+    left:30px;
+    bottom:30px;
+border-radius: 100%;
+
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(0.9, 0.9);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 6.0;
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+    opacity: 0.2;
+  }
+}
+
+
+</style>
+
+
+
+
+</head>
+<body>
+<div id="pozadina"> 
+<div id="krug"></div>
+<div id="pulsiranje"></div>
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
